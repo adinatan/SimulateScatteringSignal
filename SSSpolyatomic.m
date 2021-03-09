@@ -29,7 +29,7 @@ function out = SSSpolyatomic(EkeV,Name,xyz)
 %             0.191382262      0.584389635      0.898176095   %H1
 %            -0.052475117      0.636542526     -0.844064941]; %H2         
 %
-% out = SSS_polyn(XrayEnergy_in_keV,Name,xyz)
+% out = SSSpolyatomic(XrayEnergy_in_keV,Name,xyz)
 % ------------------------------------------------------------------------ 
 %
 %   Ver 1 (2021-03-08)
