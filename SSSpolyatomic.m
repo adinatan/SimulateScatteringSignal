@@ -47,13 +47,14 @@ end
 allpairs= nchoosek(1:numel(Name),2);
 Rab     = vecnorm((xyz(allpairs(:,1),:)-xyz(allpairs(:,2),:))');
 qR      = q(:)*Rab;
-pairc   = 2*f0(:,allpairs(:,1)).*f0(:,allpairs(:,2)).*sin(qR)./qR;
+fafb    = f0(:,allpairs(:,1)).*f0(:,allpairs(:,2));
+pairc   = 2*fafb.*sin(qR)./qR;
 Fmol    = sum(pairc,2)+sum(f0.^2,2);
 
 out.S0 = Fmol;
 out.q = q;
 out.pair = pairc;
-out.fafb = f0(:,allpairs(:,1)).*f0(:,allpairs(:,2)); %  factor 2?
+out.fafb = fafb; %  factor 2?
 out.f0 = f0;
 out.Rab = Rab;
 
