@@ -54,7 +54,7 @@ Fmol    = sum(pairc,2)+sum(f0.^2,2);
 out.S0 = Fmol;
 out.q = q;
 out.pair = pairc;
-out.fafb = fafb; %  factor 2?
+out.fafb = fafb; 
 out.f0 = f0;
 out.Rab = Rab;
 
