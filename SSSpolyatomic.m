@@ -55,8 +55,14 @@ out.q = q;
 out.pair = pairc;
 out.fafb = f0(:,allpairs(:,1)).*f0(:,allpairs(:,2)); %  factor 2?
 out.f0 = f0;
-out.pairlabels = Name(allpairs);
 out.Rab = Rab;
+
+pl=Name(allpairs);
+pairnames=[];
+for n=1:numel(allpairs)/2
+    pairnames=[pairnames {[pl{n,1:2}]}];
+end
+out.pairlabels = pairnames
 
 end
 
