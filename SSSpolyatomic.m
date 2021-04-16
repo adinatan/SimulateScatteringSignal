@@ -41,7 +41,6 @@ q = (4*pi / (12.3984193/EkeV)) .* sind(angle_grid./2);
  
 for n=1:numel(Name)
     c=CMcoef(Name{n});
-   % f0(:,n)= sum(c(1:4).*exp(-c(5:8).*(q /(4*pi)).^2))+c(9); % old CMcoef
     f0(:,n)= sum(c(1:5).*exp(-c(7:11).*(q /(4*pi)).^2))+c(6); % New ones
 end
 
