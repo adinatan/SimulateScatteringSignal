@@ -19,7 +19,7 @@ Inputs:
   out.pairlabels - the atom pair names.
 
 for example:
-
+```
  XrayEnergy_in_keV=25;
  Name = {'C';'I';'I';'H';'H'};
  xyz  = [    0.142149937     -0.113392611     -0.010383833   %C
@@ -29,3 +29,4 @@ for example:
             -0.052475117      0.636542526     -0.844064941]; %H2         
 
  out = SSS_polyn(XrayEnergy_in_keV,Name,xyz)
+```
