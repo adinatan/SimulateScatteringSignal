@@ -3,20 +3,20 @@ Simulate radial distributions of X-ray Scattering Signals (monochromatic beam) o
 
 Inputs:
 
-  Ekev   - the X-ray photon energy in KeV (scalar)
-  Name   - the names of the atoms in the polyatomic (cell array or chars)
-  xyz    - the (x,y,z) positions of each atom in angstrom (nx3 matrix)
+  - Ekev   - the X-ray photon energy in KeV (scalar)
+  - Name   - the names of the atoms in the polyatomic (cell array or chars)
+  - xyz    - the (x,y,z) positions of each atom in angstrom (nx3 matrix)
 
  Outputs:
 
-  out            - A Matlab structure that contains the following:
-  out.q          - the scattering vector.
-  out.S0         - the total angle avg scattering signal of the molecule (S_0(q)) 
-  out.pair       - the angle avg scattering signal of each atomic pair
-  out.f0         - the atomic form factor of each atom (f0(q)).
-  out.fafb       - the form factor of each atom pair (fa(q)*fb(q)).
-  out.Rab        - the atom pair distances norm(R_a-R_b).
-  out.pairlabels - the atom pair names.
+  - out            - A Matlab structure that contains the following:
+  - out.q          - the scattering vector.
+  - out.S0         - the total angle avg scattering signal of the molecule (S_0(q)) 
+  - out.pair       - the angle avg scattering signal of each atomic pair
+  - out.f0         - the atomic form factor of each atom (f0(q)).
+  - out.fafb       - the form factor of each atom pair (fa(q)*fb(q)).
+  - out.Rab        - the atom pair distances norm(R_a-R_b).
+  - out.pairlabels - the atom pair names.
 
 for example:
 ```
