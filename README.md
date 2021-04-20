@@ -1,8 +1,8 @@
 # SimulateScatteringSignal
-Simulate radial distributions of X-ray Scattering Signals (angle avg monochromatic beam) 
-of a polyatomic system given its atoms names and xyz positions 
+Simulate radial distributions of X-ray Scattering Signals (monochromatic beam) of a polyatomic given its atoms names and positions 
 
 Inputs:
+
   Ekev   - the X-ray photon energy in KeV (scalar)
   Name   - the names of the atoms in the polyatomic (cell array or chars)
   xyz    - the (x,y,z) positions of each atom in angstrom (nx3 matrix)
@@ -20,7 +20,7 @@ Inputs:
 
 for example:
 ```
- XrayEnergy_in_keV=25;
+ Ekev = 25;
  Name = {'C';'I';'I';'H';'H'};
  xyz  = [    0.142149937     -0.113392611     -0.010383833   %C
              1.804868889     -1.135903532      0.001393572   %I1
@@ -28,5 +28,5 @@ for example:
              0.191382262      0.584389635      0.898176095   %H1
             -0.052475117      0.636542526     -0.844064941]; %H2         
 
- out = SSS_polyn(XrayEnergy_in_keV,Name,xyz)
+ out = SSS_polyn(Ekev,Name,xyz)
 ```
