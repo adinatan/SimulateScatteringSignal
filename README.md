@@ -30,4 +30,4 @@ for example:
 
  out = SSSpolyatomic(Ekev,Name,xyz)
 ```
-  ![Fig1](https://github.com/adinatan/SimulateScatteringSignal/blob/master/sss_dm.png)
+  ![Fig1](https://github.com/adinatan/SimulateScatteringSignal/blob/master/sss_dm.emf)
