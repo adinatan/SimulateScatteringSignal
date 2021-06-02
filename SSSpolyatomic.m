@@ -32,7 +32,7 @@ function out = SSSpolyatomic(EkeV,Name,xyz)
 % out = SSS_polyn(XrayEnergy_in_keV,Name,xyz)
 % ------------------------------------------------------------------------ 
 %
-%   Ver 1.01 (2021-05-31)
+%   Ver 1.02 (2021-05-31)
 %   Adi Natan (natan@stanford.edu)
 
 % ealier we just used an angle grid:
