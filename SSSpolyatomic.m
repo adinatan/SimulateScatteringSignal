@@ -32,12 +32,23 @@ function out = SSSpolyatomic(EkeV,Name,xyz)
 % out = SSS_polyn(XrayEnergy_in_keV,Name,xyz)
 % ------------------------------------------------------------------------ 
 %
-%   Ver 1.01 (2021-03-11)
+%   Ver 1.01 (2021-05-31)
 %   Adi Natan (natan@stanford.edu)
 
+% ealier we just used an angle grid:
+% angle_grid=[0.01:0.01:89.9]; % 
 
-angle_grid=[0.01:0.01:89.9];
+% to emulating a 2D detctor range and pixelization
+% we assume a detector radius of 150mm 
+% and distance from the sample of 80mm.
+
+detector_r_grid=linspace(eps,1.5e2,1e3); % in mm
+z=80; % in mm
+angle_grid = acosd(z./sqrt(detector_r_grid.^2+z^2)); 
+angle_grid(1)=eps; % to avoid NaN... 
+
 q = (4*pi / (12.3984193/EkeV)) .* sind(angle_grid./2);
+
  
 for n=1:numel(Name)
     c=CMcoef(Name{n});
