@@ -1,6 +1,6 @@
 [![View Simulate X-ray Scattering Signal on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/93415-simulate-x-ray-scattering-signal)
 # SimulateScatteringSignal
-Simulate radial distributions of X-ray Scattering Signals (monochromatic beam) of a polyatomic given its atoms names and positions 
+Simulate angle-integrated X-ray Scattering Signals (monochromatic beam) of a polyatomic given its atoms names and positions 
 
 Inputs:
 
