@@ -38,7 +38,7 @@ function out = SSSpolyatomic(EkeV,Name,xyz)
 % ealier we just used an angle grid:
 % angle_grid=[0.01:0.01:89.9]; % 
 
-% to emulating a 2D detctor range and pixelization
+% to emulate a 2D detctor range and pixelization
 % we assume a detector radius of 150mm 
 % and distance from the sample of 80mm.
 
@@ -52,7 +52,7 @@ q = (4*pi / (12.3984193/EkeV)) .* sind(angle_grid./2);
  
 for n=1:numel(Name)
     c=CMcoef(Name{n});
-    f0(:,n)= sum(c(1:5).*exp(-c(7:11).*(q /(4*pi)).^2))+c(6); % New ones
+    f0(:,n)= sum(c(1:5).*exp(-c(7:11).*(q /(4*pi)).^2))+c(6);  
 end
 
 allpairs= nchoosek(1:numel(Name),2);
@@ -65,7 +65,7 @@ Fmol    = sum(pairc,2)+sum(f0.^2,2);
 out.S0 = Fmol;
 out.q = q;
 out.pair = pairc;
-out.fafb = fafb; %  factor 2?
+out.fafb = fafb; %  note no factor 2
 out.f0 = f0;
 out.Rab = Rab;
 
